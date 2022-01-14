@@ -8,3 +8,60 @@
 /* 
     1. Styling af classes - del op og skriv kommentarer
 */
+
+
+/* Intro til index.html */
+
+.intro {
+    margin-bottom: 2em;
+}
+
+.intro__heading {
+    text-align: center;
+}
+
+
+/* hovedindhold til index.html */
+
+.plants {
+    display: grid;
+    gap: 1em;
+}
+
+.plants__heading {}
+
+.plant {
+    border: 1px solid var(--primary-color);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.plant__img {
+    border-radius: 1em;
+}
+
+.plant__name {}
+
+.plant__description {}
+
+
+/* tablet size - 2 kolonne layout */
+
+@media screen and (min-width: 40em) {
+    .plants {
+        grid-template-columns: 1fr 1fr;
+    }
+    .plants__heading {
+        grid-column: 1 / -1;
+        /* span fra start til slut på sin egen row */
+    }
+}
+
+
+/* 3 kolonne layout */
+
+@media screen and (min-width: 50em) {
+    .plants {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
